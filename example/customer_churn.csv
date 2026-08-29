@@ -1,0 +1,1001 @@
+Monthly_Charge,Tenure_Months,Num_Support_Tickets,Plan_Type,Contract_Type,Customer_Feedback,Churn
+92.76,33,8,Enterprise,Two Year,I love it.,0
+59.39,14,4,Enterprise,One Year,I love it.,0
+57.02,36,9,Pro,One Year,I love it.,0
+137.44,19,5,Pro,Two Year,Okay value.,0
+85.12,39,9,Basic,Month-to-Month,Keeps crashing.,1
+123.4,58,10,Enterprise,Two Year,Great service!,0
+83.07,21,7,Enterprise,Two Year,Excellent features.,0
+26.31,35,0,Enterprise,Month-to-Month,Great service!,0
+100.1,44,8,Basic,One Year,I love it.,0
+81.66,65,3,Pro,Two Year,Okay value.,0
+46.33,50,8,Basic,Two Year,I love it.,0
+93.18,51,10,Basic,One Year,Great service!,0
+28.84,9,3,Enterprise,Month-to-Month,Excellent features.,0
+114.87,46,6,Basic,Two Year,Great service!,0
+46.43,10,5,Basic,Month-to-Month,Okay value.,0
+20.55,41,6,Pro,One Year,Great service!,0
+149.94,45,2,Basic,Month-to-Month,Excellent features.,0
+110.35,24,10,Enterprise,Month-to-Month,Support is slow.,1
+149.99,40,6,Basic,Month-to-Month,I love it.,0
+137.86,27,0,Pro,One Year,I love it.,0
+75.36,51,8,Enterprise,One Year,Great service!,0
+122.84,71,7,Pro,Two Year,I love it.,0
+110.9,43,0,Enterprise,One Year,Great service!,0
+33.3,61,2,Enterprise,Month-to-Month,Great service!,0
+92.87,4,1,Basic,Month-to-Month,Keeps crashing.,1
+96.1,38,3,Enterprise,Month-to-Month,Excellent features.,0
+142.62,15,0,Pro,Month-to-Month,I love it.,0
+143.94,62,7,Enterprise,Two Year,Horrible experience.,1
+97.96,21,1,Basic,One Year,Okay value.,0
+103.1,43,9,Pro,Month-to-Month,Horrible experience.,1
+29.68,24,7,Pro,Month-to-Month,I love it.,0
+25.95,64,3,Pro,One Year,I love it.,0
+133.45,34,0,Pro,One Year,Excellent features.,0
+42.81,29,4,Basic,Two Year,Horrible experience.,1
+106.59,11,6,Enterprise,One Year,Okay value.,0
+139.03,24,2,Enterprise,Two Year,Okay value.,0
+66.99,33,1,Enterprise,One Year,Great service!,0
+125.05,52,4,Pro,One Year,Excellent features.,0
+48.97,20,1,Enterprise,One Year,I love it.,0
+23.92,2,10,Basic,Two Year,Keeps crashing.,1
+109.82,57,9,Enterprise,One Year,Great service!,0
+83.02,24,0,Basic,One Year,Keeps crashing.,1
+85.01,62,0,Enterprise,Month-to-Month,Okay value.,0
+79.14,2,2,Basic,Month-to-Month,Keeps crashing.,1
+46.34,23,3,Enterprise,Two Year,Great service!,0
+28.97,31,1,Enterprise,One Year,Great service!,0
+91.0,55,4,Basic,One Year,Great service!,0
+113.45,4,1,Pro,Month-to-Month,I love it.,0
+148.2,12,5,Pro,Two Year,Great service!,0
+130.83,66,8,Basic,Month-to-Month,Horrible experience.,1
+113.97,28,0,Pro,Month-to-Month,Okay value.,0
+54.13,13,8,Enterprise,Two Year,Support is slow.,1
+111.18,19,2,Basic,Month-to-Month,Horrible experience.,1
+79.23,1,0,Enterprise,One Year,Great service!,0
+145.13,19,2,Basic,Month-to-Month,I love it.,0
+109.42,38,10,Pro,Two Year,Excellent features.,0
+141.02,17,9,Pro,Two Year,I love it.,0
+138.86,24,2,Basic,One Year,Excellent features.,0
+92.16,35,10,Pro,One Year,Too expensive.,1
+33.54,27,10,Pro,One Year,Okay value.,0
+76.76,47,3,Basic,Two Year,I love it.,0
+110.33,59,9,Pro,Month-to-Month,Okay value.,0
+105.05,6,6,Enterprise,One Year,Keeps crashing.,1
+115.84,4,6,Enterprise,Month-to-Month,Great service!,0
+112.33,50,6,Enterprise,One Year,Okay value.,0
+46.19,10,7,Pro,One Year,Keeps crashing.,1
+33.29,57,7,Pro,One Year,Too expensive.,1
+124.74,36,8,Enterprise,One Year,Excellent features.,0
+66.6,27,6,Enterprise,Month-to-Month,Too expensive.,1
+31.9,42,9,Pro,One Year,Okay value.,0
+35.64,39,10,Enterprise,Two Year,I love it.,0
+24.24,70,5,Basic,Month-to-Month,I love it.,0
+50.37,46,4,Pro,Month-to-Month,Great service!,0
+41.67,13,2,Pro,Two Year,I love it.,0
+116.1,27,5,Enterprise,One Year,Great service!,0
+149.59,71,5,Enterprise,Month-to-Month,Horrible experience.,1
+68.89,49,1,Enterprise,Two Year,I love it.,0
+29.38,58,10,Enterprise,One Year,I love it.,0
+98.72,10,3,Basic,One Year,I love it.,0
+51.92,60,10,Basic,Month-to-Month,Keeps crashing.,1
+31.91,35,1,Pro,One Year,I love it.,0
+98.15,7,6,Pro,Month-to-Month,Support is slow.,1
+148.61,13,4,Pro,Month-to-Month,Keeps crashing.,1
+148.86,45,1,Pro,One Year,I love it.,0
+50.04,3,4,Enterprise,Month-to-Month,I love it.,0
+66.21,29,9,Basic,Two Year,Great service!,0
+108.61,18,5,Enterprise,Two Year,Horrible experience.,1
+142.31,72,9,Pro,One Year,Excellent features.,0
+104.8,32,10,Basic,Month-to-Month,Horrible experience.,1
+57.57,41,3,Enterprise,One Year,Excellent features.,0
+36.16,34,5,Pro,One Year,Excellent features.,0
+80.6,5,2,Pro,Month-to-Month,Okay value.,0
+75.43,7,6,Enterprise,Month-to-Month,Horrible experience.,1
+132.29,6,5,Basic,One Year,Too expensive.,1
+129.19,39,8,Pro,Two Year,Excellent features.,0
+20.7,62,0,Enterprise,Month-to-Month,Okay value.,0
+111.33,69,8,Enterprise,Month-to-Month,Keeps crashing.,1
+138.41,31,3,Enterprise,Month-to-Month,Excellent features.,0
+78.83,36,7,Basic,Month-to-Month,Okay value.,0
+31.95,70,10,Basic,Two Year,Excellent features.,0
+73.57,9,8,Pro,Two Year,I love it.,0
+31.84,24,6,Enterprise,One Year,Support is slow.,1
+85.53,63,0,Basic,Month-to-Month,Great service!,0
+139.07,26,0,Enterprise,Month-to-Month,Great service!,0
+126.28,60,3,Basic,Two Year,Excellent features.,0
+89.64,26,9,Pro,Two Year,I love it.,0
+99.6,64,10,Enterprise,Two Year,Great service!,0
+61.32,7,0,Basic,One Year,Okay value.,0
+20.37,57,10,Basic,One Year,Okay value.,0
+49.16,27,7,Basic,Month-to-Month,Excellent features.,0
+73.5,63,1,Pro,Two Year,Great service!,0
+118.54,18,7,Basic,Two Year,Keeps crashing.,1
+27.35,22,9,Enterprise,One Year,Great service!,0
+91.98,13,10,Pro,One Year,Great service!,0
+63.45,11,8,Basic,One Year,I love it.,0
+79.85,65,4,Basic,Month-to-Month,Too expensive.,1
+57.91,33,2,Enterprise,Month-to-Month,Excellent features.,0
+126.43,23,5,Enterprise,Two Year,Too expensive.,1
+44.06,3,6,Pro,Month-to-Month,Support is slow.,1
+122.58,51,2,Pro,Month-to-Month,I love it.,0
+81.85,20,8,Basic,Two Year,Excellent features.,0
+87.92,17,10,Basic,Month-to-Month,Great service!,0
+23.39,69,4,Pro,Two Year,Horrible experience.,1
+95.8,33,4,Basic,One Year,Keeps crashing.,1
+102.9,21,7,Enterprise,Two Year,I love it.,0
+77.83,62,0,Enterprise,Two Year,Okay value.,0
+82.23,33,8,Basic,Month-to-Month,Too expensive.,1
+137.93,9,10,Pro,Two Year,Support is slow.,1
+95.98,3,9,Pro,One Year,Too expensive.,1
+142.58,54,8,Basic,Month-to-Month,Keeps crashing.,1
+78.77,63,3,Basic,Month-to-Month,Too expensive.,1
+93.59,70,2,Pro,Month-to-Month,Support is slow.,1
+23.75,30,3,Enterprise,Two Year,Great service!,0
+84.15,39,7,Enterprise,Two Year,Okay value.,0
+100.62,32,6,Pro,One Year,Keeps crashing.,1
+67.93,24,4,Pro,Two Year,Too expensive.,1
+24.56,68,6,Enterprise,One Year,Too expensive.,1
+136.39,57,7,Pro,One Year,Excellent features.,0
+74.27,16,7,Pro,Two Year,Excellent features.,0
+64.21,39,5,Enterprise,One Year,Okay value.,0
+91.83,3,1,Basic,One Year,Okay value.,0
+52.39,44,6,Enterprise,One Year,Support is slow.,1
+23.01,68,3,Pro,Two Year,Excellent features.,0
+58.22,66,4,Enterprise,Month-to-Month,Horrible experience.,1
+113.29,42,9,Pro,One Year,Keeps crashing.,1
+137.84,44,9,Basic,Two Year,Excellent features.,0
+56.0,62,2,Pro,One Year,Okay value.,0
+130.52,37,4,Basic,Month-to-Month,Support is slow.,1
+130.65,55,8,Enterprise,One Year,Excellent features.,0
+91.18,33,3,Basic,Month-to-Month,I love it.,0
+125.71,20,7,Enterprise,Month-to-Month,Okay value.,0
+137.95,29,6,Enterprise,Month-to-Month,Okay value.,0
+117.75,62,3,Enterprise,One Year,Excellent features.,0
+48.04,69,9,Pro,One Year,Excellent features.,0
+82.57,11,8,Basic,One Year,Support is slow.,1
+109.71,67,6,Basic,Month-to-Month,Keeps crashing.,1
+137.08,68,5,Basic,Month-to-Month,Keeps crashing.,1
+102.99,32,6,Enterprise,Two Year,Support is slow.,1
+53.58,62,3,Enterprise,One Year,Okay value.,0
+147.87,5,9,Pro,One Year,Too expensive.,1
+44.82,47,3,Pro,One Year,Okay value.,0
+36.27,55,7,Basic,Month-to-Month,Horrible experience.,1
+43.47,28,2,Pro,One Year,Okay value.,0
+112.03,3,9,Enterprise,Two Year,Support is slow.,1
+96.53,19,8,Pro,Month-to-Month,Great service!,0
+125.29,38,6,Pro,Two Year,Too expensive.,1
+103.78,54,5,Enterprise,Two Year,I love it.,0
+73.08,53,8,Basic,Two Year,Too expensive.,1
+131.12,60,8,Pro,One Year,Great service!,0
+73.18,61,4,Pro,One Year,Okay value.,0
+41.44,56,2,Enterprise,Two Year,Great service!,0
+30.27,33,7,Pro,One Year,I love it.,0
+68.74,27,3,Enterprise,Two Year,I love it.,0
+65.0,72,8,Enterprise,One Year,Okay value.,0
+93.73,42,7,Pro,Month-to-Month,Too expensive.,1
+87.14,37,0,Basic,One Year,I love it.,0
+120.2,44,1,Basic,Two Year,I love it.,0
+53.43,1,2,Basic,Month-to-Month,Horrible experience.,1
+128.14,44,6,Pro,One Year,Okay value.,0
+74.63,17,0,Enterprise,Month-to-Month,Great service!,0
+40.76,59,7,Enterprise,One Year,I love it.,0
+99.62,43,8,Basic,Month-to-Month,Okay value.,0
+49.31,9,8,Enterprise,One Year,Keeps crashing.,1
+103.94,35,2,Enterprise,One Year,Great service!,0
+37.4,40,2,Enterprise,Two Year,I love it.,0
+124.51,40,2,Pro,Two Year,I love it.,0
+67.93,53,1,Pro,Two Year,I love it.,0
+106.1,71,6,Basic,Two Year,Keeps crashing.,1
+146.58,32,4,Enterprise,One Year,Excellent features.,0
+108.25,11,7,Basic,Two Year,Great service!,0
+148.93,22,6,Pro,Two Year,Keeps crashing.,1
+48.38,41,7,Pro,Two Year,Okay value.,0
+47.73,12,1,Basic,One Year,Excellent features.,0
+84.66,1,8,Basic,Two Year,Too expensive.,1
+73.41,48,8,Enterprise,One Year,Horrible experience.,1
+99.48,59,1,Pro,One Year,I love it.,0
+63.59,40,5,Enterprise,One Year,Excellent features.,0
+100.75,32,0,Pro,Two Year,I love it.,0
+43.25,11,9,Basic,Month-to-Month,Horrible experience.,1
+73.12,70,3,Enterprise,One Year,I love it.,0
+78.16,6,2,Pro,Month-to-Month,Excellent features.,0
+129.99,64,2,Pro,One Year,I love it.,0
+48.49,3,3,Enterprise,One Year,I love it.,0
+89.06,11,3,Enterprise,Two Year,I love it.,0
+124.09,58,6,Pro,One Year,Great service!,0
+110.18,57,10,Enterprise,One Year,Okay value.,0
+116.97,49,8,Pro,One Year,Excellent features.,0
+81.39,38,8,Enterprise,One Year,Too expensive.,1
+136.67,49,5,Pro,Two Year,Okay value.,0
+146.22,63,7,Basic,One Year,Okay value.,0
+133.58,72,6,Enterprise,Two Year,Okay value.,0
+67.93,51,4,Basic,Month-to-Month,Keeps crashing.,1
+81.22,14,10,Basic,One Year,Keeps crashing.,1
+105.79,60,10,Basic,Month-to-Month,Too expensive.,1
+60.53,15,8,Basic,Month-to-Month,Support is slow.,1
+144.91,50,1,Pro,One Year,Great service!,0
+107.55,64,8,Pro,Month-to-Month,Excellent features.,0
+78.08,23,4,Basic,One Year,Horrible experience.,1
+100.9,51,9,Enterprise,Two Year,Excellent features.,0
+41.16,19,6,Basic,One Year,Okay value.,0
+84.99,34,9,Pro,One Year,I love it.,0
+67.07,42,7,Pro,Month-to-Month,Support is slow.,1
+39.04,5,4,Basic,One Year,I love it.,0
+81.59,40,1,Basic,Month-to-Month,Okay value.,0
+75.92,43,2,Basic,Month-to-Month,Excellent features.,0
+59.71,47,6,Pro,One Year,Excellent features.,0
+149.12,44,3,Pro,Month-to-Month,Great service!,0
+85.15,31,0,Enterprise,One Year,Great service!,0
+50.06,47,4,Basic,Two Year,I love it.,0
+120.67,7,3,Enterprise,Month-to-Month,Excellent features.,0
+52.84,36,7,Pro,Two Year,Great service!,0
+27.17,29,0,Pro,Month-to-Month,Okay value.,0
+116.81,11,0,Basic,One Year,Great service!,0
+134.31,64,1,Pro,Two Year,Excellent features.,0
+138.17,67,9,Basic,Month-to-Month,Okay value.,0
+89.78,7,10,Pro,Month-to-Month,Support is slow.,1
+47.24,25,10,Enterprise,Month-to-Month,Horrible experience.,1
+49.38,5,7,Basic,Two Year,Too expensive.,1
+97.38,27,8,Basic,Two Year,I love it.,0
+94.36,63,4,Enterprise,Month-to-Month,Support is slow.,1
+100.79,52,6,Enterprise,Month-to-Month,Horrible experience.,1
+126.84,71,7,Enterprise,Two Year,Excellent features.,0
+74.58,6,6,Basic,Two Year,Too expensive.,1
+95.72,12,3,Pro,Month-to-Month,Okay value.,0
+94.78,29,9,Pro,Month-to-Month,Keeps crashing.,1
+136.01,49,1,Enterprise,One Year,I love it.,0
+137.6,18,3,Pro,Month-to-Month,Keeps crashing.,1
+79.45,9,3,Enterprise,One Year,Okay value.,0
+21.64,1,6,Basic,One Year,Keeps crashing.,1
+35.4,23,4,Pro,One Year,Too expensive.,1
+88.48,16,4,Basic,Month-to-Month,Horrible experience.,1
+119.22,65,2,Basic,Two Year,Okay value.,0
+107.78,16,9,Enterprise,Two Year,Great service!,0
+64.35,40,3,Enterprise,Month-to-Month,Great service!,0
+72.34,64,0,Basic,Month-to-Month,Excellent features.,0
+64.49,47,3,Pro,One Year,Great service!,0
+139.98,63,6,Enterprise,Month-to-Month,Support is slow.,1
+71.33,15,0,Enterprise,Month-to-Month,Keeps crashing.,1
+104.49,4,3,Enterprise,Month-to-Month,Okay value.,0
+145.84,7,6,Pro,Month-to-Month,Support is slow.,1
+47.06,13,1,Basic,One Year,Okay value.,0
+76.83,69,7,Pro,Two Year,Okay value.,0
+23.6,18,4,Basic,One Year,Horrible experience.,1
+144.91,25,4,Enterprise,Month-to-Month,Too expensive.,1
+82.14,21,2,Enterprise,Month-to-Month,Too expensive.,1
+39.57,54,6,Enterprise,One Year,Support is slow.,1
+49.49,59,10,Pro,Two Year,Support is slow.,1
+116.72,62,9,Pro,One Year,Great service!,0
+83.9,47,1,Pro,Month-to-Month,I love it.,0
+143.58,25,2,Basic,Two Year,Okay value.,0
+120.31,24,0,Basic,Two Year,I love it.,0
+129.19,46,4,Basic,Month-to-Month,Keeps crashing.,1
+27.39,44,5,Enterprise,Month-to-Month,Keeps crashing.,1
+68.61,9,8,Pro,One Year,Too expensive.,1
+48.4,69,7,Basic,Two Year,Great service!,0
+26.79,54,0,Enterprise,Two Year,Okay value.,0
+139.72,18,1,Basic,Two Year,Okay value.,0
+63.69,6,4,Enterprise,Month-to-Month,Support is slow.,1
+34.07,38,6,Basic,One Year,Excellent features.,0
+50.08,23,7,Pro,One Year,Support is slow.,1
+109.52,55,8,Pro,Month-to-Month,Excellent features.,0
+115.58,26,7,Basic,Two Year,Okay value.,0
+140.75,44,0,Pro,Two Year,I love it.,0
+138.55,71,10,Enterprise,Month-to-Month,Excellent features.,0
+110.82,2,5,Basic,Month-to-Month,Too expensive.,1
+136.95,13,9,Pro,Two Year,Too expensive.,1
+94.18,37,10,Basic,Month-to-Month,Keeps crashing.,1
+129.85,2,6,Pro,Two Year,Support is slow.,1
+84.45,7,5,Pro,Month-to-Month,Horrible experience.,1
+58.68,9,1,Enterprise,Two Year,I love it.,0
+29.27,14,1,Basic,Month-to-Month,Horrible experience.,1
+52.01,15,9,Basic,Month-to-Month,I love it.,0
+73.88,1,6,Basic,One Year,Support is slow.,1
+149.26,11,1,Pro,One Year,Great service!,0
+47.37,33,9,Enterprise,Two Year,Horrible experience.,1
+99.88,14,3,Pro,Two Year,I love it.,0
+33.43,69,1,Pro,Two Year,Great service!,0
+143.3,6,9,Pro,Two Year,Support is slow.,1
+143.88,65,3,Basic,One Year,Great service!,0
+105.14,51,8,Basic,Two Year,Great service!,0
+127.71,18,9,Basic,Two Year,Okay value.,0
+55.05,29,6,Enterprise,Month-to-Month,Horrible experience.,1
+127.14,40,1,Pro,Month-to-Month,I love it.,0
+105.29,18,4,Enterprise,Two Year,Too expensive.,1
+96.91,27,7,Pro,Month-to-Month,Excellent features.,0
+147.64,40,9,Enterprise,Two Year,Excellent features.,0
+43.99,36,9,Basic,One Year,Excellent features.,0
+117.14,26,9,Enterprise,Two Year,Excellent features.,0
+98.04,26,7,Pro,Month-to-Month,Great service!,0
+122.5,28,2,Basic,Month-to-Month,Horrible experience.,1
+22.88,3,4,Basic,Month-to-Month,Support is slow.,1
+28.71,22,0,Enterprise,Two Year,Excellent features.,0
+118.8,49,5,Enterprise,Two Year,Great service!,0
+42.32,43,7,Pro,Two Year,I love it.,0
+99.66,60,1,Enterprise,One Year,Okay value.,0
+91.02,55,2,Pro,Month-to-Month,I love it.,0
+50.92,26,2,Enterprise,Month-to-Month,Okay value.,0
+34.7,6,3,Pro,Two Year,I love it.,0
+26.31,18,3,Pro,Two Year,I love it.,0
+122.81,52,9,Enterprise,Two Year,Support is slow.,1
+148.45,1,6,Basic,Two Year,Horrible experience.,1
+39.32,14,2,Pro,Two Year,Horrible experience.,1
+46.93,10,7,Basic,One Year,Great service!,0
+69.0,51,10,Pro,One Year,I love it.,0
+24.47,69,0,Enterprise,Two Year,Excellent features.,0
+116.55,51,6,Basic,Two Year,Excellent features.,0
+84.35,35,2,Pro,Two Year,Excellent features.,0
+69.34,16,2,Enterprise,Two Year,I love it.,0
+26.08,17,9,Pro,Two Year,Keeps crashing.,1
+30.88,22,3,Pro,Month-to-Month,Horrible experience.,1
+109.18,57,8,Basic,One Year,Great service!,0
+95.25,13,4,Basic,One Year,Too expensive.,1
+87.66,49,1,Pro,One Year,Okay value.,0
+127.78,39,8,Enterprise,Month-to-Month,Horrible experience.,1
+106.25,25,5,Pro,Two Year,Okay value.,0
+118.79,47,3,Pro,Month-to-Month,I love it.,0
+84.44,5,5,Pro,One Year,Keeps crashing.,1
+56.85,1,4,Basic,Month-to-Month,Support is slow.,1
+67.56,53,1,Enterprise,One Year,Excellent features.,0
+112.68,70,3,Enterprise,Month-to-Month,I love it.,0
+100.09,17,1,Enterprise,One Year,Great service!,0
+86.86,44,10,Pro,Month-to-Month,Excellent features.,0
+106.75,70,2,Pro,One Year,Okay value.,0
+47.52,39,8,Enterprise,Month-to-Month,Support is slow.,1
+101.38,12,1,Basic,One Year,Horrible experience.,1
+125.19,71,7,Basic,Two Year,Okay value.,0
+140.45,64,10,Enterprise,Two Year,Excellent features.,0
+78.63,33,9,Enterprise,One Year,Okay value.,0
+124.6,4,5,Basic,Two Year,Excellent features.,0
+104.35,58,10,Enterprise,Two Year,Keeps crashing.,1
+43.4,37,10,Basic,Two Year,Great service!,0
+121.48,4,10,Basic,Month-to-Month,Horrible experience.,1
+30.99,53,2,Basic,Month-to-Month,Great service!,0
+50.12,49,10,Enterprise,Month-to-Month,Okay value.,0
+69.98,6,2,Enterprise,Month-to-Month,Excellent features.,0
+111.36,68,1,Pro,One Year,Great service!,0
+47.75,71,2,Pro,Month-to-Month,Too expensive.,1
+74.11,39,2,Enterprise,One Year,Excellent features.,0
+74.24,55,2,Pro,Month-to-Month,I love it.,0
+146.32,56,4,Pro,One Year,Support is slow.,1
+68.96,44,3,Pro,One Year,I love it.,0
+63.27,1,0,Basic,One Year,Okay value.,0
+96.08,36,6,Basic,Month-to-Month,I love it.,0
+89.73,43,6,Basic,One Year,Okay value.,0
+113.73,27,9,Basic,One Year,I love it.,0
+147.16,47,8,Pro,Two Year,Support is slow.,1
+128.12,60,6,Pro,Month-to-Month,Excellent features.,0
+133.8,41,8,Enterprise,Month-to-Month,Support is slow.,1
+74.38,31,10,Enterprise,One Year,Okay value.,0
+149.45,27,0,Pro,One Year,I love it.,0
+140.34,58,7,Pro,Two Year,Horrible experience.,1
+140.83,7,2,Basic,Two Year,I love it.,0
+53.46,15,5,Basic,One Year,Too expensive.,1
+112.94,3,9,Basic,Two Year,Support is slow.,1
+143.64,60,8,Pro,One Year,Great service!,0
+44.41,1,5,Enterprise,Month-to-Month,Too expensive.,1
+116.92,68,7,Pro,One Year,Great service!,0
+95.44,39,9,Pro,One Year,I love it.,0
+47.67,52,7,Basic,Month-to-Month,Great service!,0
+118.37,55,5,Pro,Month-to-Month,Great service!,0
+117.25,64,9,Enterprise,Two Year,Excellent features.,0
+118.24,36,3,Enterprise,One Year,Excellent features.,0
+96.37,43,1,Enterprise,One Year,Okay value.,0
+91.13,5,6,Basic,Two Year,Excellent features.,0
+74.85,63,5,Enterprise,Month-to-Month,Horrible experience.,1
+52.62,3,5,Pro,Two Year,Okay value.,0
+26.25,42,5,Enterprise,Two Year,Excellent features.,0
+104.32,46,5,Basic,One Year,Horrible experience.,1
+69.1,68,5,Basic,Two Year,Excellent features.,0
+117.6,33,1,Pro,Month-to-Month,Excellent features.,0
+96.96,12,6,Pro,One Year,Keeps crashing.,1
+60.95,68,0,Pro,Two Year,Great service!,0
+97.86,48,8,Basic,Month-to-Month,Keeps crashing.,1
+53.2,65,8,Enterprise,One Year,Okay value.,0
+32.97,63,8,Basic,Two Year,I love it.,0
+49.77,69,0,Enterprise,Two Year,Great service!,0
+125.6,61,1,Pro,Month-to-Month,Okay value.,0
+27.66,19,0,Basic,Month-to-Month,Too expensive.,1
+100.93,71,9,Enterprise,Two Year,I love it.,0
+76.0,23,1,Enterprise,One Year,Okay value.,0
+136.56,20,8,Enterprise,Two Year,Keeps crashing.,1
+50.05,20,8,Enterprise,Two Year,Great service!,0
+33.44,12,8,Basic,Two Year,Excellent features.,0
+28.17,8,8,Basic,One Year,Excellent features.,0
+40.04,19,8,Enterprise,Two Year,Great service!,0
+35.18,17,9,Basic,One Year,I love it.,0
+94.99,33,6,Pro,Two Year,Too expensive.,1
+72.99,24,2,Pro,Month-to-Month,Great service!,0
+115.61,24,9,Basic,Two Year,I love it.,0
+82.89,66,2,Enterprise,Month-to-Month,Horrible experience.,1
+121.19,7,9,Enterprise,One Year,Too expensive.,1
+70.58,72,0,Enterprise,One Year,Okay value.,0
+149.92,2,5,Enterprise,Month-to-Month,I love it.,0
+105.45,39,9,Pro,One Year,Too expensive.,1
+142.1,15,0,Enterprise,Two Year,Excellent features.,0
+118.3,4,9,Pro,Two Year,I love it.,0
+74.38,61,4,Pro,Month-to-Month,Great service!,0
+142.27,31,0,Enterprise,Two Year,Excellent features.,0
+111.8,39,10,Basic,One Year,Excellent features.,0
+29.13,48,9,Pro,Month-to-Month,I love it.,0
+102.21,24,10,Pro,One Year,Support is slow.,1
+116.83,9,6,Enterprise,Month-to-Month,Great service!,0
+88.4,19,6,Enterprise,One Year,Okay value.,0
+87.51,29,8,Pro,Two Year,Horrible experience.,1
+114.13,15,5,Pro,Two Year,Too expensive.,1
+92.02,37,4,Pro,Month-to-Month,Keeps crashing.,1
+104.3,68,9,Pro,One Year,Keeps crashing.,1
+109.25,18,2,Enterprise,One Year,I love it.,0
+58.88,41,8,Pro,Month-to-Month,Okay value.,0
+46.96,31,4,Pro,Month-to-Month,Too expensive.,1
+143.96,30,2,Enterprise,Two Year,Okay value.,0
+48.16,41,6,Basic,Month-to-Month,I love it.,0
+135.66,53,1,Enterprise,One Year,Great service!,0
+145.42,41,5,Basic,Month-to-Month,Horrible experience.,1
+98.76,30,4,Basic,Two Year,Okay value.,0
+28.28,2,3,Pro,Month-to-Month,Too expensive.,1
+94.11,68,7,Pro,Two Year,I love it.,0
+46.64,62,3,Enterprise,One Year,Excellent features.,0
+73.29,30,6,Pro,Two Year,I love it.,0
+77.02,38,9,Pro,Two Year,Keeps crashing.,1
+34.37,17,2,Basic,Two Year,Too expensive.,1
+37.87,31,8,Basic,Month-to-Month,Okay value.,0
+96.53,68,5,Basic,Two Year,Okay value.,0
+138.84,6,8,Pro,Two Year,Too expensive.,1
+26.74,70,3,Pro,Month-to-Month,Excellent features.,0
+93.89,48,3,Enterprise,Two Year,I love it.,0
+42.7,55,1,Basic,One Year,Okay value.,0
+143.87,31,8,Enterprise,Two Year,Excellent features.,0
+142.91,70,9,Basic,Month-to-Month,Too expensive.,1
+73.35,35,4,Pro,One Year,Okay value.,0
+35.6,26,2,Pro,Two Year,Excellent features.,0
+85.8,57,3,Basic,One Year,I love it.,0
+132.17,38,4,Enterprise,Month-to-Month,Support is slow.,1
+49.88,8,0,Basic,One Year,Great service!,0
+103.94,6,6,Enterprise,Two Year,Great service!,0
+60.23,15,3,Enterprise,Two Year,Excellent features.,0
+81.94,39,5,Pro,Two Year,Excellent features.,0
+104.23,21,9,Pro,One Year,Excellent features.,0
+137.06,2,1,Basic,Two Year,Great service!,0
+105.35,35,3,Enterprise,One Year,Great service!,0
+100.66,33,0,Basic,Month-to-Month,Great service!,0
+115.82,69,2,Enterprise,Two Year,Great service!,0
+23.78,64,9,Pro,Two Year,Keeps crashing.,1
+54.28,31,9,Enterprise,Month-to-Month,Too expensive.,1
+20.12,32,4,Basic,Two Year,Okay value.,0
+95.59,23,2,Enterprise,One Year,Excellent features.,0
+44.81,44,6,Basic,One Year,Support is slow.,1
+27.13,11,7,Enterprise,Two Year,I love it.,0
+22.61,21,0,Pro,Two Year,Excellent features.,0
+110.22,14,0,Enterprise,One Year,Great service!,0
+56.31,4,4,Pro,Two Year,Great service!,0
+98.0,38,2,Pro,One Year,I love it.,0
+75.49,15,2,Basic,Two Year,Excellent features.,0
+59.84,44,7,Enterprise,Two Year,I love it.,0
+144.16,10,8,Pro,One Year,I love it.,0
+37.36,67,1,Enterprise,One Year,Great service!,0
+149.39,1,3,Pro,Two Year,Excellent features.,0
+29.01,18,3,Pro,Month-to-Month,Keeps crashing.,1
+136.51,59,4,Pro,Month-to-Month,I love it.,0
+85.31,65,9,Enterprise,Two Year,Support is slow.,1
+76.42,22,7,Enterprise,Two Year,Support is slow.,1
+129.31,25,3,Enterprise,One Year,I love it.,0
+32.72,40,4,Basic,One Year,Okay value.,0
+64.62,9,2,Enterprise,One Year,I love it.,0
+99.57,50,5,Enterprise,Two Year,Okay value.,0
+59.9,56,7,Basic,One Year,Support is slow.,1
+27.33,50,8,Basic,One Year,Too expensive.,1
+68.03,33,8,Pro,Month-to-Month,I love it.,0
+74.91,28,0,Pro,One Year,I love it.,0
+81.66,42,6,Basic,Month-to-Month,Great service!,0
+129.27,39,3,Pro,Month-to-Month,Okay value.,0
+100.4,12,9,Basic,One Year,Okay value.,0
+28.19,49,3,Basic,Month-to-Month,I love it.,0
+53.22,42,4,Pro,Month-to-Month,I love it.,0
+69.36,44,5,Pro,Month-to-Month,Keeps crashing.,1
+99.68,5,3,Enterprise,Two Year,Excellent features.,0
+134.09,43,1,Pro,Month-to-Month,I love it.,0
+149.4,2,5,Basic,One Year,Excellent features.,0
+35.02,7,8,Pro,Month-to-Month,Too expensive.,1
+34.49,45,10,Pro,Two Year,I love it.,0
+90.74,9,4,Enterprise,Two Year,Too expensive.,1
+61.85,51,8,Basic,One Year,Great service!,0
+97.68,43,9,Enterprise,Month-to-Month,Support is slow.,1
+120.44,27,1,Basic,Month-to-Month,Great service!,0
+121.69,7,0,Enterprise,One Year,Excellent features.,0
+53.62,34,9,Pro,One Year,Too expensive.,1
+35.15,66,8,Enterprise,Two Year,Great service!,0
+34.29,32,7,Basic,Month-to-Month,Great service!,0
+129.63,28,10,Enterprise,Two Year,Support is slow.,1
+99.59,31,9,Pro,One Year,Excellent features.,0
+40.52,34,3,Pro,Two Year,Okay value.,0
+120.72,38,9,Enterprise,Month-to-Month,Support is slow.,1
+35.04,9,4,Enterprise,Two Year,Support is slow.,1
+66.12,12,5,Pro,One Year,Support is slow.,1
+82.86,35,6,Basic,Month-to-Month,Too expensive.,1
+120.99,58,0,Enterprise,Month-to-Month,Okay value.,0
+116.6,61,1,Basic,One Year,Great service!,0
+122.03,43,8,Enterprise,One Year,Okay value.,0
+86.32,14,8,Basic,One Year,Great service!,0
+41.12,56,8,Basic,Month-to-Month,Excellent features.,0
+146.76,39,3,Pro,One Year,Great service!,0
+35.82,71,7,Pro,Two Year,Support is slow.,1
+128.17,47,9,Enterprise,Month-to-Month,Great service!,0
+146.76,34,2,Enterprise,One Year,I love it.,0
+57.47,50,6,Basic,One Year,Great service!,0
+71.93,5,2,Basic,Month-to-Month,Support is slow.,1
+136.19,24,2,Pro,One Year,Great service!,0
+104.56,48,5,Basic,One Year,Great service!,0
+79.87,37,8,Enterprise,Month-to-Month,Keeps crashing.,1
+27.36,50,5,Enterprise,One Year,Excellent features.,0
+138.78,27,4,Enterprise,Two Year,Excellent features.,0
+21.58,28,5,Enterprise,Two Year,Okay value.,0
+35.61,68,4,Enterprise,Two Year,Too expensive.,1
+94.83,16,4,Enterprise,One Year,Horrible experience.,1
+94.19,47,9,Pro,Month-to-Month,Horrible experience.,1
+59.65,32,7,Basic,Month-to-Month,Too expensive.,1
+114.49,11,1,Basic,One Year,Okay value.,0
+117.34,37,2,Pro,Two Year,I love it.,0
+38.04,20,10,Pro,Month-to-Month,Too expensive.,1
+113.85,26,5,Pro,Two Year,I love it.,0
+108.92,66,9,Enterprise,One Year,Excellent features.,0
+29.73,48,8,Basic,Month-to-Month,Great service!,0
+29.26,46,7,Pro,Two Year,I love it.,0
+146.15,21,3,Basic,One Year,Okay value.,0
+34.99,58,1,Pro,Two Year,Okay value.,0
+56.04,10,10,Pro,Month-to-Month,Excellent features.,0
+122.18,50,3,Enterprise,One Year,Okay value.,0
+109.24,64,8,Pro,Two Year,Excellent features.,0
+128.79,44,8,Basic,One Year,Great service!,0
+121.44,10,9,Pro,Month-to-Month,Horrible experience.,1
+20.32,49,1,Basic,Month-to-Month,Great service!,0
+107.58,50,4,Basic,Month-to-Month,Horrible experience.,1
+142.32,7,0,Pro,One Year,Too expensive.,1
+93.03,40,8,Pro,Two Year,Keeps crashing.,1
+95.56,54,10,Pro,One Year,I love it.,0
+58.06,14,4,Basic,Two Year,Too expensive.,1
+41.36,53,10,Enterprise,One Year,Horrible experience.,1
+102.56,68,4,Enterprise,One Year,Great service!,0
+45.16,3,7,Basic,Two Year,Horrible experience.,1
+84.95,54,2,Basic,Two Year,Great service!,0
+88.32,6,5,Basic,One Year,Excellent features.,0
+72.54,36,9,Enterprise,One Year,Okay value.,0
+94.8,7,9,Pro,One Year,Horrible experience.,1
+129.79,7,5,Basic,One Year,Keeps crashing.,1
+59.4,31,6,Enterprise,Two Year,Excellent features.,0
+138.58,57,6,Pro,Two Year,Great service!,0
+84.51,25,0,Pro,One Year,Okay value.,0
+27.32,30,0,Basic,Month-to-Month,I love it.,0
+131.54,69,9,Basic,Month-to-Month,Keeps crashing.,1
+42.96,27,1,Enterprise,One Year,I love it.,0
+113.62,66,7,Basic,Month-to-Month,Keeps crashing.,1
+96.41,64,9,Enterprise,One Year,I love it.,0
+110.1,54,4,Basic,One Year,Great service!,0
+69.09,65,3,Pro,One Year,Okay value.,0
+66.17,24,4,Enterprise,One Year,Too expensive.,1
+122.08,64,10,Enterprise,One Year,Excellent features.,0
+124.18,39,0,Enterprise,Two Year,Great service!,0
+29.28,15,6,Enterprise,Month-to-Month,Horrible experience.,1
+33.12,15,8,Basic,One Year,I love it.,0
+107.11,27,0,Pro,One Year,Okay value.,0
+138.62,37,8,Pro,Two Year,Excellent features.,0
+96.1,45,6,Enterprise,One Year,Support is slow.,1
+89.05,40,5,Basic,Month-to-Month,Great service!,0
+144.22,47,3,Basic,Month-to-Month,Support is slow.,1
+62.4,48,1,Enterprise,Two Year,Excellent features.,0
+112.92,69,0,Basic,Two Year,I love it.,0
+132.06,71,10,Pro,Two Year,Okay value.,0
+64.05,63,8,Enterprise,Month-to-Month,Okay value.,0
+146.43,62,4,Basic,One Year,Horrible experience.,1
+89.02,44,1,Basic,Two Year,Okay value.,0
+29.83,19,0,Pro,Month-to-Month,Okay value.,0
+149.22,19,3,Enterprise,Two Year,Excellent features.,0
+63.93,69,8,Basic,Month-to-Month,I love it.,0
+105.06,10,10,Pro,Two Year,Horrible experience.,1
+63.88,21,9,Enterprise,One Year,Horrible experience.,1
+105.41,33,6,Enterprise,Two Year,Great service!,0
+94.22,8,4,Enterprise,One Year,Support is slow.,1
+47.85,67,4,Basic,Month-to-Month,Support is slow.,1
+49.35,31,6,Pro,Month-to-Month,Great service!,0
+84.4,56,0,Pro,One Year,Great service!,0
+49.34,17,4,Pro,One Year,Excellent features.,0
+141.09,42,4,Enterprise,Month-to-Month,Horrible experience.,1
+96.11,25,4,Basic,Month-to-Month,Great service!,0
+107.43,32,5,Enterprise,Month-to-Month,Keeps crashing.,1
+67.82,31,8,Enterprise,Two Year,Support is slow.,1
+119.21,4,3,Pro,Two Year,Great service!,0
+97.74,46,9,Enterprise,Month-to-Month,Horrible experience.,1
+44.21,22,7,Basic,One Year,Too expensive.,1
+103.01,51,2,Pro,Two Year,Okay value.,0
+103.55,37,6,Pro,Two Year,Okay value.,0
+64.1,7,4,Basic,Two Year,I love it.,0
+94.69,9,4,Basic,One Year,Keeps crashing.,1
+145.68,44,9,Enterprise,One Year,Excellent features.,0
+26.82,70,0,Enterprise,Month-to-Month,Excellent features.,0
+84.19,31,1,Basic,One Year,Great service!,0
+77.96,44,2,Basic,Two Year,I love it.,0
+69.45,11,6,Pro,One Year,Support is slow.,1
+61.51,19,8,Enterprise,Two Year,Okay value.,0
+54.68,48,9,Pro,One Year,Too expensive.,1
+132.75,61,10,Pro,Two Year,Great service!,0
+140.03,16,10,Enterprise,Month-to-Month,Too expensive.,1
+119.28,17,5,Enterprise,One Year,I love it.,0
+92.55,31,7,Pro,One Year,Great service!,0
+70.7,67,5,Enterprise,Two Year,Great service!,0
+128.59,19,3,Enterprise,Two Year,Too expensive.,1
+47.96,58,0,Pro,Month-to-Month,I love it.,0
+126.8,47,3,Pro,One Year,I love it.,0
+129.11,8,3,Pro,One Year,Great service!,0
+42.16,30,8,Basic,Two Year,Excellent features.,0
+38.49,56,0,Pro,Month-to-Month,Too expensive.,1
+100.84,7,1,Enterprise,Month-to-Month,Keeps crashing.,1
+40.51,48,9,Basic,One Year,Keeps crashing.,1
+26.02,50,2,Pro,One Year,Great service!,0
+71.64,25,3,Basic,Two Year,Excellent features.,0
+103.06,13,0,Pro,One Year,Great service!,0
+85.97,55,3,Enterprise,One Year,Great service!,0
+39.2,43,1,Pro,Month-to-Month,I love it.,0
+40.45,41,0,Basic,Month-to-Month,Excellent features.,0
+146.84,12,1,Basic,Month-to-Month,Support is slow.,1
+56.09,49,7,Pro,One Year,Okay value.,0
+128.73,17,7,Basic,Month-to-Month,I love it.,0
+106.14,58,9,Enterprise,Two Year,Okay value.,0
+20.51,28,6,Enterprise,Two Year,Okay value.,0
+54.01,14,10,Basic,Month-to-Month,Support is slow.,1
+131.37,4,8,Basic,One Year,Support is slow.,1
+46.85,17,9,Basic,One Year,Okay value.,0
+60.72,55,2,Enterprise,One Year,Okay value.,0
+23.12,11,10,Pro,Two Year,Okay value.,0
+48.19,9,6,Enterprise,Month-to-Month,Keeps crashing.,1
+122.77,40,4,Basic,Two Year,Great service!,0
+131.18,20,10,Basic,Month-to-Month,Support is slow.,1
+71.53,16,4,Pro,Month-to-Month,Great service!,0
+45.22,3,10,Pro,One Year,Support is slow.,1
+81.58,47,10,Enterprise,Month-to-Month,Keeps crashing.,1
+70.93,33,0,Basic,Month-to-Month,Okay value.,0
+112.46,27,2,Basic,Month-to-Month,Okay value.,0
+86.15,60,3,Pro,One Year,Okay value.,0
+72.63,26,9,Basic,One Year,I love it.,0
+58.93,61,4,Basic,Month-to-Month,Support is slow.,1
+89.74,60,9,Basic,Month-to-Month,Horrible experience.,1
+75.31,10,3,Pro,Month-to-Month,Keeps crashing.,1
+38.53,4,0,Pro,One Year,Okay value.,0
+83.12,12,4,Pro,Two Year,Keeps crashing.,1
+36.44,10,9,Pro,Month-to-Month,Horrible experience.,1
+57.88,47,2,Pro,Two Year,Great service!,0
+101.7,46,7,Basic,Two Year,Excellent features.,0
+107.25,57,7,Basic,Month-to-Month,Too expensive.,1
+57.85,22,4,Enterprise,Month-to-Month,Great service!,0
+141.52,31,2,Enterprise,Month-to-Month,Excellent features.,0
+33.77,54,1,Enterprise,One Year,Excellent features.,0
+98.59,41,5,Enterprise,Month-to-Month,Horrible experience.,1
+137.8,19,5,Basic,Two Year,I love it.,0
+31.63,28,3,Pro,Month-to-Month,Excellent features.,0
+85.9,54,10,Basic,One Year,Excellent features.,0
+123.58,4,4,Pro,Month-to-Month,Support is slow.,1
+52.93,63,9,Enterprise,One Year,I love it.,0
+112.09,20,9,Basic,Two Year,Too expensive.,1
+42.75,13,4,Basic,Two Year,Great service!,0
+80.25,13,9,Enterprise,One Year,Horrible experience.,1
+90.69,2,6,Basic,One Year,Horrible experience.,1
+46.96,62,3,Enterprise,Month-to-Month,Horrible experience.,1
+127.26,71,1,Basic,Two Year,Excellent features.,0
+58.45,4,1,Pro,Two Year,Excellent features.,0
+30.79,43,1,Pro,One Year,Excellent features.,0
+146.64,26,10,Basic,One Year,Excellent features.,0
+29.66,24,6,Pro,Month-to-Month,Too expensive.,1
+36.59,19,6,Pro,Month-to-Month,Okay value.,0
+145.45,49,10,Pro,Two Year,I love it.,0
+99.77,53,4,Basic,Two Year,I love it.,0
+58.65,44,7,Pro,One Year,Great service!,0
+88.46,60,6,Basic,One Year,Great service!,0
+104.12,30,8,Pro,One Year,Horrible experience.,1
+140.8,50,2,Pro,Two Year,Okay value.,0
+101.09,35,10,Pro,Two Year,Great service!,0
+51.3,43,5,Enterprise,One Year,Keeps crashing.,1
+32.75,65,5,Pro,Two Year,Great service!,0
+34.36,48,2,Pro,Month-to-Month,Great service!,0
+127.45,33,6,Basic,One Year,Great service!,0
+20.74,66,0,Pro,One Year,I love it.,0
+67.08,63,4,Basic,Two Year,Excellent features.,0
+124.41,30,4,Basic,Two Year,Great service!,0
+96.82,70,10,Basic,Month-to-Month,Horrible experience.,1
+63.87,5,10,Enterprise,Two Year,Excellent features.,0
+60.24,14,7,Basic,Two Year,Too expensive.,1
+66.66,27,1,Enterprise,Two Year,I love it.,0
+144.34,57,3,Enterprise,Month-to-Month,Excellent features.,0
+136.64,45,5,Basic,Two Year,Great service!,0
+85.22,28,0,Enterprise,Month-to-Month,Keeps crashing.,1
+92.76,61,1,Basic,Two Year,Great service!,0
+84.37,8,9,Enterprise,One Year,Great service!,0
+59.05,11,6,Pro,Month-to-Month,Support is slow.,1
+98.33,63,1,Pro,Two Year,Excellent features.,0
+40.28,4,2,Pro,One Year,Excellent features.,0
+102.0,57,0,Enterprise,Two Year,Great service!,0
+98.77,71,6,Basic,Month-to-Month,Horrible experience.,1
+104.7,16,3,Enterprise,Two Year,Great service!,0
+124.15,72,3,Basic,One Year,Okay value.,0
+99.84,26,7,Basic,Month-to-Month,Support is slow.,1
+87.29,47,8,Basic,One Year,Horrible experience.,1
+32.38,28,8,Enterprise,Month-to-Month,Support is slow.,1
+143.25,40,0,Enterprise,Month-to-Month,Excellent features.,0
+133.42,10,10,Pro,One Year,Too expensive.,1
+41.84,33,4,Enterprise,Two Year,Excellent features.,0
+103.81,37,7,Basic,Month-to-Month,Keeps crashing.,1
+114.34,14,10,Pro,Two Year,I love it.,0
+147.9,46,3,Pro,Two Year,Excellent features.,0
+88.0,25,6,Pro,One Year,Horrible experience.,1
+96.39,72,5,Enterprise,One Year,I love it.,0
+104.84,56,7,Enterprise,One Year,I love it.,0
+138.69,29,9,Basic,Two Year,Okay value.,0
+137.13,24,2,Enterprise,One Year,Great service!,0
+32.8,26,5,Enterprise,One Year,Excellent features.,0
+149.66,20,4,Enterprise,Month-to-Month,Horrible experience.,1
+29.36,59,0,Enterprise,Month-to-Month,Okay value.,0
+70.53,10,7,Enterprise,Month-to-Month,Too expensive.,1
+79.0,60,7,Enterprise,Two Year,Great service!,0
+41.34,16,7,Pro,One Year,Too expensive.,1
+73.62,32,8,Basic,Month-to-Month,Excellent features.,0
+39.53,8,4,Basic,One Year,Horrible experience.,1
+135.78,71,4,Basic,One Year,Support is slow.,1
+97.98,63,3,Basic,Two Year,Okay value.,0
+98.13,3,9,Enterprise,One Year,I love it.,0
+138.58,50,7,Basic,Month-to-Month,Keeps crashing.,1
+72.07,58,0,Enterprise,Two Year,I love it.,0
+74.94,67,4,Enterprise,Two Year,Support is slow.,1
+143.58,67,6,Basic,Month-to-Month,Support is slow.,1
+135.28,18,5,Basic,Month-to-Month,Too expensive.,1
+120.77,70,6,Basic,One Year,Okay value.,0
+64.71,15,5,Pro,Two Year,Okay value.,0
+86.31,55,1,Pro,Month-to-Month,Horrible experience.,1
+27.96,15,0,Pro,One Year,I love it.,0
+98.09,22,2,Basic,Month-to-Month,Too expensive.,1
+53.55,38,1,Basic,One Year,I love it.,0
+94.96,48,4,Basic,One Year,Excellent features.,0
+113.14,7,10,Basic,Month-to-Month,Too expensive.,1
+31.87,51,6,Pro,Two Year,Horrible experience.,1
+108.01,50,9,Pro,One Year,Support is slow.,1
+107.9,32,9,Basic,Two Year,I love it.,0
+57.44,33,8,Enterprise,One Year,Okay value.,0
+133.2,25,9,Basic,Month-to-Month,Keeps crashing.,1
+71.06,53,6,Pro,Two Year,Great service!,0
+130.27,6,8,Enterprise,One Year,Keeps crashing.,1
+111.13,51,5,Enterprise,Two Year,Excellent features.,0
+77.3,31,8,Basic,Two Year,Great service!,0
+81.22,61,1,Pro,One Year,Excellent features.,0
+106.6,68,9,Pro,Month-to-Month,Excellent features.,0
+45.38,50,0,Pro,One Year,Excellent features.,0
+87.52,4,7,Pro,One Year,Horrible experience.,1
+112.41,30,6,Basic,Month-to-Month,Too expensive.,1
+21.2,37,3,Enterprise,Two Year,Excellent features.,0
+46.43,65,6,Enterprise,Month-to-Month,Too expensive.,1
+69.53,55,8,Pro,One Year,Okay value.,0
+80.72,57,8,Enterprise,One Year,Keeps crashing.,1
+62.42,59,0,Pro,Two Year,Great service!,0
+99.29,47,8,Pro,One Year,Horrible experience.,1
+134.81,49,10,Basic,One Year,Excellent features.,0
+111.39,6,0,Basic,Two Year,Great service!,0
+81.83,18,7,Basic,Two Year,Keeps crashing.,1
+34.78,23,2,Pro,Month-to-Month,I love it.,0
+117.42,67,10,Basic,Month-to-Month,Great service!,0
+80.07,5,3,Enterprise,One Year,Okay value.,0
+52.04,59,10,Enterprise,One Year,Okay value.,0
+127.57,68,2,Pro,Two Year,Great service!,0
+94.78,66,4,Basic,Month-to-Month,Horrible experience.,1
+130.29,62,1,Basic,One Year,I love it.,0
+53.64,36,8,Pro,One Year,Too expensive.,1
+113.39,17,2,Enterprise,Month-to-Month,Horrible experience.,1
+100.86,30,7,Enterprise,Two Year,Excellent features.,0
+85.26,50,8,Basic,Month-to-Month,Great service!,0
+145.44,14,10,Pro,Month-to-Month,Support is slow.,1
+110.38,30,1,Basic,Two Year,I love it.,0
+94.96,71,9,Basic,Month-to-Month,Excellent features.,0
+113.83,18,4,Basic,Month-to-Month,Keeps crashing.,1
+120.83,47,10,Enterprise,One Year,I love it.,0
+124.49,67,8,Enterprise,Two Year,Excellent features.,0
+107.16,7,5,Basic,Month-to-Month,Support is slow.,1
+86.98,51,5,Basic,Two Year,I love it.,0
+91.8,7,1,Enterprise,Two Year,Great service!,0
+145.03,47,8,Pro,Month-to-Month,Great service!,0
+62.89,1,1,Basic,Two Year,Excellent features.,0
+71.58,3,6,Enterprise,Month-to-Month,Okay value.,0
+59.26,70,0,Pro,One Year,Great service!,0
+55.74,37,2,Basic,Month-to-Month,Great service!,0
+20.06,29,4,Pro,Month-to-Month,Horrible experience.,1
+78.95,46,10,Basic,Two Year,Excellent features.,0
+125.4,43,6,Pro,One Year,Okay value.,0
+133.77,14,1,Basic,Month-to-Month,Horrible experience.,1
+24.72,69,7,Enterprise,One Year,Excellent features.,0
+127.27,38,5,Basic,One Year,Great service!,0
+143.94,27,5,Enterprise,Two Year,Great service!,0
+133.74,72,1,Basic,One Year,Excellent features.,0
+28.85,39,2,Pro,Month-to-Month,Great service!,0
+110.78,12,8,Basic,Two Year,Too expensive.,1
+121.1,44,4,Pro,Two Year,Great service!,0
+77.91,49,3,Pro,Month-to-Month,Excellent features.,0
+124.5,4,10,Enterprise,Month-to-Month,Okay value.,0
+121.0,34,8,Basic,One Year,Excellent features.,0
+91.12,38,9,Basic,Month-to-Month,Horrible experience.,1
+34.71,9,7,Pro,Two Year,Keeps crashing.,1
+67.72,54,7,Enterprise,One Year,Keeps crashing.,1
+31.53,6,6,Basic,Two Year,Keeps crashing.,1
+118.47,62,6,Basic,Month-to-Month,Support is slow.,1
+39.62,33,4,Basic,One Year,Horrible experience.,1
+102.76,9,8,Basic,Two Year,I love it.,0
+79.33,44,2,Enterprise,Month-to-Month,Okay value.,0
+130.72,38,1,Pro,One Year,Great service!,0
+88.96,59,1,Basic,Two Year,Excellent features.,0
+108.55,60,5,Basic,Two Year,Great service!,0
+113.66,30,5,Basic,Month-to-Month,Support is slow.,1
+44.84,12,2,Basic,One Year,I love it.,0
+138.37,58,0,Basic,Two Year,Okay value.,0
+46.61,33,6,Enterprise,Month-to-Month,Great service!,0
+142.03,49,6,Pro,Two Year,Support is slow.,1
+122.47,51,3,Pro,Two Year,Okay value.,0
+48.04,7,3,Basic,Two Year,Okay value.,0
+57.96,28,6,Enterprise,One Year,Support is slow.,1
+80.66,67,3,Enterprise,Two Year,I love it.,0
+97.43,46,6,Pro,Month-to-Month,Horrible experience.,1
+71.98,13,4,Pro,Two Year,Excellent features.,0
+88.66,45,9,Enterprise,One Year,I love it.,0
+92.51,48,2,Enterprise,One Year,Okay value.,0
+105.2,12,7,Basic,One Year,I love it.,0
+90.44,68,8,Enterprise,One Year,Support is slow.,1
+122.28,20,3,Enterprise,Month-to-Month,Excellent features.,0
+21.54,48,3,Pro,One Year,I love it.,0
+112.12,20,9,Enterprise,One Year,Keeps crashing.,1
+44.27,12,0,Enterprise,Two Year,Great service!,0
+70.58,43,1,Enterprise,Month-to-Month,Okay value.,0
+102.61,34,9,Enterprise,Month-to-Month,Keeps crashing.,1
+36.26,33,5,Pro,Two Year,Keeps crashing.,1
+102.18,21,6,Basic,Two Year,Excellent features.,0
+141.81,32,2,Pro,Month-to-Month,Great service!,0
+80.25,3,4,Basic,One Year,Excellent features.,0
+127.7,44,0,Enterprise,Month-to-Month,I love it.,0
+68.29,7,6,Enterprise,Two Year,Horrible experience.,1
+87.72,55,9,Pro,Two Year,Great service!,0
+42.65,40,1,Basic,Month-to-Month,I love it.,0
+108.38,48,6,Basic,Month-to-Month,Support is slow.,1
+34.96,44,5,Enterprise,Two Year,Support is slow.,1
+82.78,9,5,Basic,One Year,I love it.,0
+122.49,23,3,Pro,Month-to-Month,Keeps crashing.,1
+130.72,51,9,Pro,Two Year,Excellent features.,0
+118.34,54,7,Pro,Two Year,Great service!,0
+62.01,11,3,Enterprise,One Year,Keeps crashing.,1
+122.53,60,5,Basic,Two Year,Horrible experience.,1
+80.35,13,2,Enterprise,Month-to-Month,I love it.,0
+100.41,64,5,Pro,Two Year,Support is slow.,1
+47.69,50,0,Pro,One Year,Excellent features.,0
+58.14,41,7,Enterprise,Two Year,I love it.,0
+56.71,58,8,Pro,Two Year,Great service!,0
+67.8,4,0,Basic,Month-to-Month,Keeps crashing.,1
+102.72,27,7,Enterprise,One Year,Okay value.,0
+123.73,26,0,Basic,Month-to-Month,Excellent features.,0
+69.84,66,4,Basic,One Year,Too expensive.,1
+56.58,55,2,Enterprise,Month-to-Month,Keeps crashing.,1
+35.38,7,3,Basic,Month-to-Month,Support is slow.,1
+90.01,15,5,Basic,One Year,Keeps crashing.,1
+60.18,19,1,Basic,One Year,Okay value.,0
+91.27,58,6,Pro,Two Year,Horrible experience.,1
+49.35,47,10,Pro,Month-to-Month,Okay value.,0
+131.65,24,7,Enterprise,Month-to-Month,Okay value.,0
+50.37,59,6,Enterprise,One Year,Support is slow.,1
+118.04,68,10,Pro,Two Year,Excellent features.,0
+109.93,30,10,Enterprise,Two Year,Excellent features.,0
+54.48,14,0,Pro,One Year,I love it.,0
+36.11,48,10,Pro,Two Year,I love it.,0
+143.45,59,8,Basic,Month-to-Month,Great service!,0
+96.85,16,5,Enterprise,Month-to-Month,Too expensive.,1
+46.23,61,5,Pro,Month-to-Month,Horrible experience.,1
+66.69,20,1,Basic,Two Year,Okay value.,0
+105.99,2,4,Basic,One Year,Too expensive.,1
+73.04,2,7,Basic,Month-to-Month,Keeps crashing.,1
+56.75,72,6,Pro,Two Year,Okay value.,0
+139.38,14,10,Pro,Two Year,Support is slow.,1
+78.06,54,0,Pro,Two Year,I love it.,0
+21.75,51,5,Enterprise,One Year,Too expensive.,1
+122.69,71,3,Pro,Month-to-Month,Too expensive.,1
+135.91,44,4,Enterprise,Month-to-Month,Great service!,0
+24.45,65,0,Pro,One Year,Okay value.,0
+143.01,3,10,Pro,One Year,Excellent features.,0
+27.24,57,10,Basic,Two Year,Great service!,0
+87.85,35,0,Pro,Two Year,Excellent features.,0
+115.45,53,9,Pro,Two Year,Great service!,0
+63.68,1,1,Basic,One Year,Excellent features.,0
+136.62,63,0,Pro,Two Year,Okay value.,0
+149.36,67,9,Enterprise,Month-to-Month,Horrible experience.,1
+35.77,13,1,Pro,Two Year,Great service!,0
+48.75,1,10,Pro,One Year,Keeps crashing.,1
+91.86,47,3,Basic,One Year,Okay value.,0
+134.08,6,4,Pro,Month-to-Month,Great service!,0
+79.98,22,7,Pro,One Year,Horrible experience.,1
+52.61,49,2,Pro,Month-to-Month,Keeps crashing.,1
+94.4,35,8,Basic,Two Year,Excellent features.,0
+129.76,20,7,Basic,Month-to-Month,Too expensive.,1
+65.34,40,2,Pro,One Year,Great service!,0
+125.8,5,5,Pro,One Year,Support is slow.,1
+113.94,31,8,Enterprise,Month-to-Month,Keeps crashing.,1
+39.71,30,3,Pro,One Year,I love it.,0
+74.45,72,3,Pro,Two Year,Great service!,0
+85.43,57,8,Enterprise,One Year,Keeps crashing.,1
+125.64,43,5,Basic,Month-to-Month,Too expensive.,1
+78.46,40,7,Basic,Month-to-Month,I love it.,0
+129.18,43,8,Pro,One Year,Too expensive.,1
+38.6,15,4,Pro,Two Year,I love it.,0
+141.83,11,4,Basic,One Year,Excellent features.,0
+66.48,71,1,Basic,Two Year,Great service!,0
+122.59,28,6,Enterprise,Month-to-Month,Great service!,0
+111.59,72,2,Basic,One Year,Okay value.,0
+100.97,36,2,Pro,Two Year,Great service!,0
+46.01,28,8,Enterprise,Two Year,Excellent features.,0
+65.09,45,3,Pro,One Year,I love it.,0
+148.11,46,10,Pro,Two Year,Great service!,0
+29.23,61,6,Basic,Two Year,Excellent features.,0
+71.74,23,3,Pro,Month-to-Month,Horrible experience.,1
+21.77,58,7,Enterprise,One Year,Support is slow.,1
+93.8,47,4,Enterprise,One Year,I love it.,0
+101.0,20,5,Enterprise,Month-to-Month,Okay value.,0
+28.52,52,10,Pro,Two Year,Okay value.,0
+131.45,1,6,Enterprise,Month-to-Month,Support is slow.,1
+30.74,20,2,Pro,Two Year,Great service!,0
+78.57,41,4,Basic,Two Year,Okay value.,0
+41.58,18,10,Enterprise,One Year,Excellent features.,0
+108.41,9,1,Basic,Two Year,Okay value.,0
+52.88,54,9,Basic,Two Year,Keeps crashing.,1
+50.14,54,5,Pro,Month-to-Month,Keeps crashing.,1
+149.02,3,10,Pro,Two Year,Great service!,0
+138.61,54,1,Enterprise,One Year,Excellent features.,0
+100.73,59,3,Enterprise,Month-to-Month,Okay value.,0
+101.95,5,10,Enterprise,Two Year,Keeps crashing.,1
+126.01,15,0,Enterprise,Two Year,I love it.,0
+65.51,1,1,Enterprise,Month-to-Month,Horrible experience.,1
+75.66,6,0,Enterprise,Two Year,Okay value.,0
+97.26,45,4,Basic,One Year,Horrible experience.,1
+105.1,33,9,Basic,One Year,Support is slow.,1
+21.14,3,7,Pro,One Year,Horrible experience.,1
+77.76,4,4,Basic,Two Year,Too expensive.,1
+142.35,20,0,Pro,One Year,Great service!,0
+139.32,47,6,Basic,One Year,I love it.,0
+146.0,7,5,Basic,Month-to-Month,Support is slow.,1
+141.47,11,3,Enterprise,Month-to-Month,Keeps crashing.,1
+117.23,15,5,Enterprise,One Year,Horrible experience.,1
+88.28,72,2,Pro,Two Year,I love it.,0
+27.02,21,4,Basic,One Year,Too expensive.,1
+70.78,5,5,Enterprise,Month-to-Month,Horrible experience.,1
+100.16,38,1,Pro,One Year,I love it.,0
+54.38,60,5,Pro,Month-to-Month,I love it.,0
+24.33,23,5,Pro,One Year,Too expensive.,1
+53.68,51,9,Pro,One Year,Horrible experience.,1
+125.18,19,4,Pro,Month-to-Month,Too expensive.,1
+100.03,72,9,Basic,Two Year,Great service!,0
+138.02,56,3,Pro,Month-to-Month,Great service!,0
+44.93,68,5,Enterprise,Month-to-Month,Support is slow.,1
+60.65,62,3,Enterprise,One Year,I love it.,0
+35.26,12,8,Pro,Two Year,Keeps crashing.,1
+95.68,4,2,Basic,Two Year,Keeps crashing.,1
+48.22,60,2,Enterprise,Month-to-Month,Great service!,0
+98.84,46,2,Enterprise,One Year,Excellent features.,0
+99.38,3,8,Pro,One Year,Keeps crashing.,1
+83.39,56,7,Pro,One Year,Great service!,0
+24.06,14,3,Basic,Month-to-Month,Keeps crashing.,1
+83.47,37,9,Pro,One Year,Great service!,0
+50.77,72,8,Enterprise,One Year,Too expensive.,1
+45.15,36,8,Enterprise,Two Year,Great service!,0
+48.09,42,6,Pro,One Year,Okay value.,0
+119.79,22,7,Enterprise,One Year,Too expensive.,1
+132.5,27,9,Pro,Two Year,Keeps crashing.,1
+20.59,22,9,Basic,One Year,Great service!,0
+139.3,67,6,Basic,Two Year,Okay value.,0
+125.34,45,4,Pro,One Year,Excellent features.,0
+114.45,15,3,Pro,Two Year,Excellent features.,0
+94.11,44,3,Enterprise,Two Year,Excellent features.,0
+102.67,30,9,Enterprise,One Year,Okay value.,0
+98.17,34,7,Pro,One Year,I love it.,0
+112.56,1,5,Basic,One Year,Excellent features.,0
+128.67,72,8,Pro,One Year,I love it.,0
+116.11,58,9,Basic,Month-to-Month,Keeps crashing.,1
+111.98,46,7,Enterprise,Two Year,Horrible experience.,1
+64.05,72,6,Pro,Two Year,I love it.,0
+45.94,45,8,Basic,Two Year,Too expensive.,1
+87.33,16,7,Enterprise,One Year,Keeps crashing.,1

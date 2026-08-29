@@ -1,0 +1,3 @@
+[console_scripts]
+zeroshot-predict = predict:main
+zeroshot-train = zeroshot_pfn.train:main
