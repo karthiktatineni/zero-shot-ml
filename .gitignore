@@ -9,7 +9,12 @@ env/
 .ruff_cache/
 
 # Project specific directories
-runs/
+# Ignore large files and logs in runs/, but keep images
+runs/**/*.jsonl
+runs/**/*.pt
+runs/**/*.pth
+runs/**/checkpoints/
+runs/**/.control/
 checkpoints/
 data/
 
