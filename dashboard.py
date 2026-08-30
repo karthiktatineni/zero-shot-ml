@@ -16,7 +16,7 @@ st.title("Zero-Shot PFN Training Dashboard")
 # For simplicity and compatibility, we'll just read the file and use a manual button, 
 # or use st.rerun() with a sleep if a checkbox is checked.
 
-run_dir = st.text_input("Run Directory", "runs/main_run")
+run_dir = st.text_input("Run Directory", "runs/2m_run")
 metrics_file = Path(run_dir) / "metrics.jsonl"
 
 auto_refresh = st.checkbox("Auto-Refresh (5s)", value=True)
@@ -45,7 +45,7 @@ else:
     latest = df.iloc[-1]
     
     current_step = int(latest['step'])
-    total_steps = st.number_input("Total Steps (for progress bar)", min_value=1, value=62500)
+    total_steps = st.number_input("Total Steps (for progress bar)", min_value=1, value=500000)
     progress_val = min(current_step / total_steps, 1.0)
     st.progress(progress_val, text=f"Training Progress: {current_step} / {total_steps} steps ({progress_val:.1%})")
     

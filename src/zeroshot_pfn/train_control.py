@@ -83,9 +83,12 @@ class CheckpointManager:
         """
         rankable_loss = self._rankable_loss(val_loss)
 
+        # Strip 'module.' prefix if wrapped in DDP
+        model_state = model.module.state_dict() if hasattr(model, 'module') else model.state_dict()
+
         state_dict = {
             'step': step,
-            'model_state_dict': model.state_dict(),
+            'model_state_dict': model_state,
             'optimizer_state_dict': optimizer.state_dict(),
             'scaler_state_dict': scaler.state_dict() if scaler else None,
             'scheduler_state_dict': scheduler.state_dict() if scheduler else None,
@@ -145,8 +148,21 @@ class CheckpointManager:
         if not latest_path.exists():
             return 0 # step 0
             
+        
         checkpoint = torch.load(latest_path, map_location='cpu', weights_only=False)
-        model.load_state_dict(checkpoint['model_state_dict'])
+        model_state = checkpoint['model_state_dict']
+        
+        # In case we load a DDP checkpoint into a non-DDP model or vice-versa
+        if hasattr(model, 'module'):
+            # Model is DDP, but checkpoint might not be
+            if not any(k.startswith('module.') for k in model_state.keys()):
+                model_state = {f'module.{k}': v for k, v in model_state.items()}
+        else:
+            # Model is not DDP, but checkpoint might be
+            if any(k.startswith('module.') for k in model_state.keys()):
+                model_state = {k.replace('module.', '', 1): v for k, v in model_state.items()}
+                
+        model.load_state_dict(model_state)
         self.latest_val_loss = checkpoint.get('val_loss')
         
         if optimizer and checkpoint.get('optimizer_state_dict'):

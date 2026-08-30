@@ -1,14 +1,23 @@
 import argparse
 import time
+import os
 from pathlib import Path
 
 import torch
+import torch.amp as amp
 from torch.utils.data import DataLoader, IterableDataset
+import torch.distributed as dist
+from torch.nn.parallel import DistributedDataParallel as DDP
+
+# Enable TF32 for large matmul speedups on Ampere/Ada GPUs
+torch.backends.cuda.matmul.allow_tf32 = True
+torch.backends.cudnn.allow_tf32 = True
 
 from zeroshot_pfn.config import PriorConfig
 from zeroshot_pfn.generator import sample_episode
 from zeroshot_pfn.model.transformer import PFNTransformer
 from zeroshot_pfn.train_control import CheckpointManager, ControlSignal, get_control_signal
+from zeroshot_pfn.monitoring import TrainingLogger
 
 
 class StreamingEpisodeDataset(IterableDataset):
@@ -51,9 +60,6 @@ class StreamingEpisodeDataset(IterableDataset):
             }
             count += 1
 
-from zeroshot_pfn.monitoring import TrainingLogger
-
-
 def collate_episodes(batch):
     # Find max N in batch
     max_n = max(item['x'].shape[0] for item in batch)
@@ -90,170 +96,278 @@ def collate_episodes(batch):
     n_classes = torch.tensor([item['n_classes'] for item in batch], dtype=torch.long)
     return x, y, is_query, missing_mask, n_classes
 
+
 def train_loop(
-    run_dir: str = "runs/pilot",
-    total_steps: int = 10000,
-    batch_size: int = 8,
-    log_interval: int = 100,
-    accumulation_steps: int = 2
+    run_dir: str,
+    total_steps: int,
+    batch_size: int,
+    num_workers: int,
+    log_interval: int,
+    accumulation_steps: int,
+    n_layers: int,
+    d_model: int,
+    n_heads: int,
+    d_ff: int,
+    no_compile: bool = False
 ):
-    print(f"Starting Training in {run_dir} for {total_steps} steps...")
+    # Detect if running under torchrun (DDP)
+    world_size = int(os.environ.get('WORLD_SIZE', 1))
+    rank = int(os.environ.get('RANK', 0))
+    local_rank = int(os.environ.get('LOCAL_RANK', 0))
     
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f"Device: {device}")
+    is_ddp = world_size > 1
+    
+    if is_ddp:
+        os.environ['NCCL_DEBUG'] = 'INFO'
+        dist.init_process_group("nccl")
+        torch.cuda.set_device(local_rank)
+        device = torch.device(f'cuda:{local_rank}')
+    else:
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        
+    if rank == 0:
+        if is_ddp:
+            print(f"Starting DDP Training across {world_size} GPUs in {run_dir} for {total_steps} steps...")
+            print(f"Global Batch Size: {batch_size * world_size}")
+        else:
+            print(f"Starting Single-GPU Training in {run_dir} for {total_steps} steps...")
+    
+    torch.backends.cudnn.benchmark = True
+    torch.set_float32_matmul_precision('high')
     
     config = PriorConfig()
     
-    # Checkpoint and Control initialization
+    # Checkpoint and Control initialization (Rank 0 only)
     run_dir_path = Path(run_dir)
     control_dir = run_dir_path / ".control"
-    control_dir.mkdir(parents=True, exist_ok=True)
     
-    checkpoint_mgr = CheckpointManager(run_dir_path / "checkpoints")
+    checkpoint_mgr = None
+    logger = None
+    if rank == 0:
+        control_dir.mkdir(parents=True, exist_ok=True)
+        checkpoint_mgr = CheckpointManager(run_dir_path / "checkpoints")
+        logger = TrainingLogger(run_dir_path)
     
-    # Initialize Logger
-    logger = TrainingLogger(run_dir_path)
-    
-    # Data Loading
+    # Data Loading (each rank has its own dataset/dataloader generating unique synthetic data)
     dataset = StreamingEpisodeDataset(config)
-    # Using 0 workers for safety in Windows unless if __name__ == "__main__" is heavily respected.
-    # We use 0 workers for the pilot to avoid multiprocessing complexities in this demo.
     dataloader = DataLoader(
         dataset, 
         batch_size=batch_size, 
         collate_fn=collate_episodes,
-        num_workers=4,
+        num_workers=num_workers,
         pin_memory=True,
-        prefetch_factor=2
+        prefetch_factor=4 if num_workers > 0 else None,
+        persistent_workers=num_workers > 0
     )
     
     # Model Initialization
     model = PFNTransformer(
         max_features=config.n_features_max,
         max_classes=10,
-        d_model=128,
-        n_layers=6,
-        n_heads=4,
-        d_ff=512
+        d_model=d_model,
+        n_layers=n_layers,
+        n_heads=n_heads,
+        d_ff=d_ff
     ).to(device)
+    
+    if is_ddp:
+        model = DDP(model, device_ids=[local_rank])
+    
+    import sys
+    if sys.platform != "win32" and not no_compile:
+        if rank == 0:
+            print("Enabling torch.compile for maximum throughput...")
+        model = torch.compile(model)
     
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
     scaler = torch.amp.GradScaler('cuda')
     
-    # Cosine scheduler with warmup (assuming warmup for first 10% of steps)
-    warmup_steps = int(0.1 * total_steps)
-    def lr_lambda(current_step: int):
-        if current_step < warmup_steps:
-            return float(current_step) / float(max(1, warmup_steps))
-        return 1.0 # CosineAnnealingLR takes over after warmup (simplified)
-        
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=total_steps)
     criterion = torch.nn.CrossEntropyLoss(ignore_index=-100)
     
-    # Load state if exists
-    start_step = checkpoint_mgr.load_latest(model, optimizer, scaler, scheduler)
-    moving_loss = checkpoint_mgr.latest_val_loss
+    local_cp_mgr = CheckpointManager(run_dir_path / "checkpoints") if rank != 0 else checkpoint_mgr
+    start_step = local_cp_mgr.load_latest(model, optimizer, scaler, scheduler)
+    moving_loss = local_cp_mgr.latest_val_loss
     if moving_loss is not None:
         moving_loss = float(moving_loss)
     
-    if start_step > 0:
+    if rank == 0 and start_step > 0:
         print(f"Resumed from step {start_step}")
         
     model.train()
-    
     data_iter = iter(dataloader)
     
     start_time = time.time()
+    total_data_time = 0.0
+    total_gpu_time = 0.0
     
-    for step in range(start_step, total_steps):
-        # 1. Check Control Signals
-        signal = get_control_signal(control_dir)
-        if signal == ControlSignal.STOP:
-            print("\n[STOP] Signal received. Saving checkpoint and exiting.")
-            checkpoint_mgr.save_checkpoint(model, optimizer, scaler, scheduler, step, moving_loss)
-            break
-        elif signal == ControlSignal.PAUSE:
-            print("\n[PAUSE] Signal received. Saving state and pausing...")
-            checkpoint_mgr.save_checkpoint(model, optimizer, scaler, scheduler, step, moving_loss)
-            while get_control_signal(control_dir) == ControlSignal.PAUSE:
-                time.sleep(2.0)
-            print("[RESUME] Pause signal removed. Resuming training.")
+    # Control Signal Tensor [0: RUN, 1: PAUSE, 2: STOP]
+    signal_tensor = torch.zeros(1, dtype=torch.int32, device=device)
+    
+    try:
+        for step in range(start_step, total_steps):
+            # 1. Check Control Signals (Rank 0 checks and broadcasts)
+            if rank == 0:
+                signal = get_control_signal(control_dir)
+                if signal == ControlSignal.STOP:
+                    signal_tensor[0] = 2
+                elif signal == ControlSignal.PAUSE:
+                    signal_tensor[0] = 1
+                else:
+                    signal_tensor[0] = 0
             
-        # 2. Get next batch
-        x, y, is_query, missing_mask, n_classes = next(data_iter)
-        x = x.to(device)
-        y = y.to(device)
-        is_query = is_query.to(device)
-        missing_mask = missing_mask.to(device)
-        n_classes = n_classes.to(device)
-        
-        # 3. Forward and Backward
-        with torch.amp.autocast('cuda', dtype=torch.float16):
-            logits = model(x, y, is_query, missing_mask, num_classes=n_classes)
+            if is_ddp:
+                dist.broadcast(signal_tensor, src=0)
             
-            query_logits = logits[is_query]
-            query_y = y[is_query]
+            if signal_tensor[0].item() == 2: # STOP
+                if rank == 0:
+                    print("\n[STOP] Signal received. Saving checkpoint and exiting.")
+                    checkpoint_mgr.save_checkpoint(model, optimizer, scaler, scheduler, step, moving_loss)
+                break
+                
+            elif signal_tensor[0].item() == 1: # PAUSE
+                if rank == 0:
+                    print("\n[PAUSE] Signal received. Saving state and pausing...")
+                    checkpoint_mgr.save_checkpoint(model, optimizer, scaler, scheduler, step, moving_loss)
+                
+                while True:
+                    if rank == 0:
+                        signal = get_control_signal(control_dir)
+                        if signal != ControlSignal.PAUSE:
+                            signal_tensor[0] = 0
+                        else:
+                            signal_tensor[0] = 1
+                    
+                    if is_ddp:
+                        dist.broadcast(signal_tensor, src=0)
+                    
+                    if signal_tensor[0].item() != 1:
+                        if rank == 0:
+                            print("[RESUME] Pause signal removed. Resuming training.")
+                        break
+                    time.sleep(2.0)
+                
+            # 2. Get next batch
+            t0 = time.time()
+            x, y, is_query, missing_mask, n_classes = next(data_iter)
             
-            loss = criterion(query_logits, query_y)
-            loss = loss / accumulation_steps
+            x = x.to(device)
+            y = y.to(device)
+            is_query = is_query.to(device)
+            missing_mask = missing_mask.to(device)
+            n_classes = n_classes.to(device)
             
-        scaler.scale(loss).backward()
-        
-        if (step + 1) % accumulation_steps == 0:
-            # Gradient clipping
-            scaler.unscale_(optimizer)
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+            torch.cuda.synchronize(device)
+            t1 = time.time()
+            total_data_time += (t1 - t0)
             
-            scaler.step(optimizer)
-            scaler.update()
-            optimizer.zero_grad(set_to_none=True)
-            scheduler.step()
+            # 3. Forward and Backward
+            with torch.amp.autocast('cuda', dtype=torch.float16):
+                logits = model(x, y, is_query, missing_mask, num_classes=n_classes)
+                query_logits = logits[is_query]
+                query_y = y[is_query]
+                loss = criterion(query_logits, query_y)
+                loss = loss / accumulation_steps
+                
+            scaler.scale(loss).backward()
             
-        # Update metrics
-        current_loss = loss.item() * accumulation_steps
-        if moving_loss is None:
-            moving_loss = current_loss
-        else:
-            moving_loss = 0.9 * moving_loss + 0.1 * current_loss
-        
-        # 4. Logging
-        if (step + 1) % log_interval == 0:
-            elapsed = time.time() - start_time
-            episodes_per_sec = (log_interval * batch_size) / elapsed
-            lr = optimizer.param_groups[0]['lr']
-            print(f"Step {step+1:06d}/{total_steps} | Loss: {moving_loss:.4f} | LR: {lr:.2e} | Speed: {episodes_per_sec:.1f} ep/s")
+            if (step + 1) % accumulation_steps == 0:
+                scaler.unscale_(optimizer)
+                torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+                scaler.step(optimizer)
+                scaler.update()
+                optimizer.zero_grad(set_to_none=True)
+                scheduler.step()
+                
+            torch.cuda.synchronize(device)
+            t2 = time.time()
+            total_gpu_time += (t2 - t1)
             
-            # Log telemetry to JSONL
-            logger.log(step=step+1, loss=moving_loss, lr=lr, speed_eps=episodes_per_sec)
+            # Update metrics
+            if is_ddp:
+                current_loss_tensor = torch.tensor(loss.item() * accumulation_steps, device=device)
+                dist.all_reduce(current_loss_tensor, op=dist.ReduceOp.AVG)
+                current_loss = current_loss_tensor.item()
+            else:
+                current_loss = loss.item() * accumulation_steps
             
-            start_time = time.time()
+            if moving_loss is None:
+                moving_loss = current_loss
+            else:
+                moving_loss = 0.9 * moving_loss + 0.1 * current_loss
             
-        # 5. Checkpointing logic (Milestones)
-        is_milestone = (step + 1) in [100_000, 250_000, 500_000]
-        # We simulate a "validation" loss for top_k by just using moving_loss for now
-        if is_milestone or (step + 1) % 10000 == 0:
-            checkpoint_mgr.save_checkpoint(model, optimizer, scaler, scheduler, step+1, moving_loss, is_milestone)
+            # 4. Logging
+            if (step + 1) % log_interval == 0:
+                elapsed = time.time() - start_time
+                episodes_per_sec = (log_interval * batch_size * world_size) / elapsed
+                lr = optimizer.param_groups[0]['lr']
+                
+                total_profiled = total_data_time + total_gpu_time
+                data_pct = (total_data_time / total_profiled) * 100 if total_profiled > 0 else 0
+                gpu_pct = (total_gpu_time / total_profiled) * 100 if total_profiled > 0 else 0
+                
+                if rank == 0:
+                    print(f"Step {step+1:06d}/{total_steps} | Loss: {moving_loss:.4f} | LR: {lr:.2e} | Speed: {episodes_per_sec:.1f} ep/s | Data: {data_pct:.1f}% | GPU: {gpu_pct:.1f}%")
+                    logger.log(step=step+1, loss=moving_loss, lr=lr, speed_eps=episodes_per_sec)
+                
+                start_time = time.time()
+                total_data_time = 0.0
+                total_gpu_time = 0.0
+                
+            # 5. Checkpointing logic (Milestones)
+            if rank == 0:
+                is_milestone = (step + 1) in [10_000, 50_000, 100_000]
+                if is_milestone or (step + 1) % 10000 == 0:
+                    checkpoint_mgr.save_checkpoint(model, optimizer, scaler, scheduler, step+1, moving_loss, is_milestone)
+                    
+        if rank == 0:
+            print("Training finished! Saving final checkpoint...")
+            checkpoint_mgr.save_checkpoint(model, optimizer, scaler, scheduler, total_steps, moving_loss, True)
             
-    print("Training finished!")
+    except KeyboardInterrupt:
+        if rank == 0:
+            print("\n[Ctrl+C] Interrupted! Saving latest checkpoint before exiting...")
+            if 'step' in locals():
+                checkpoint_mgr.save_checkpoint(model, optimizer, scaler, scheduler, step, moving_loss)
+    finally:
+        if is_ddp:
+            dist.destroy_process_group()
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pilot", action="store_true", help="Run a short pilot of 10,000 steps")
-    parser.add_argument("--total-steps", type=int, default=100000, help="Total steps to train for (each step is 16 episodes)")
+    parser.add_argument("--pilot", action="store_true", help="Run a short pilot of 500 steps")
+    parser.add_argument("--total-steps", type=int, default=13750, help="Total steps to train for")
+    parser.add_argument("--run-dir", type=str, default="runs/main_run", help="Directory to save the run data")
+    
+    # 10M Parameter defaults
+    parser.add_argument("--n-layers", type=int, default=12)
+    parser.add_argument("--d-model", type=int, default=256)
+    parser.add_argument("--n-heads", type=int, default=8)
+    parser.add_argument("--d-ff", type=int, default=1107)
+    
+    parser.add_argument("--batch-size", type=int, default=32)
+    parser.add_argument("--num-workers", type=int, default=2)
+    parser.add_argument("--no-compile", action="store_true", help="Disable torch.compile")
+    
     args = parser.parse_args()
     
-    batch_size = 8
-    accumulation_steps = 2
-    
+    accumulation_steps = 1
     if args.pilot:
-        steps = 10000
+        steps = 500
     else:
         steps = args.total_steps
         
     train_loop(
-        run_dir="runs/main_run",
+        run_dir=args.run_dir,
         total_steps=steps,
-        batch_size=batch_size,
+        batch_size=args.batch_size,
+        num_workers=args.num_workers,
         log_interval=100,
-        accumulation_steps=accumulation_steps
+        accumulation_steps=accumulation_steps,
+        n_layers=args.n_layers,
+        d_model=args.d_model,
+        n_heads=args.n_heads,
+        d_ff=args.d_ff,
+        no_compile=args.no_compile
     )

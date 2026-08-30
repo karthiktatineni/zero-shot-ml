@@ -15,7 +15,7 @@ class ZeroShotClassifier(BaseEstimator, ClassifierMixin):
     """
     Scikit-learn style wrapper for Zero-Shot PFN inference.
     """
-    def __init__(self, checkpoint_path: str | None = None, dummy: bool = False, max_n: int = 120):
+    def __init__(self, checkpoint_path: str | None = None, dummy: bool = False, max_n: int = 120, model_kwargs: dict = None):
         self.checkpoint_path = checkpoint_path
         self.dummy = dummy
         self.max_n = max_n
@@ -23,14 +23,18 @@ class ZeroShotClassifier(BaseEstimator, ClassifierMixin):
         self.config = PriorConfig()
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         
-        self.model = PFNTransformer(
-            max_features=self.config.n_features_max,
-            max_classes=10,
-            d_model=128,
-            n_layers=6,
-            n_heads=4,
-            d_ff=512
-        ).to(self.device)
+        default_kwargs = {
+            "max_features": self.config.n_features_max,
+            "max_classes": 10,
+            "d_model": 128,
+            "n_layers": 6,
+            "n_heads": 4,
+            "d_ff": 512
+        }
+        if model_kwargs:
+            default_kwargs.update(model_kwargs)
+            
+        self.model = PFNTransformer(**default_kwargs).to(self.device)
         if self.dummy:
             print("Using DUMMY (untrained) PFN checkpoint for dry run.")
         else:

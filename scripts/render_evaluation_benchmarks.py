@@ -9,8 +9,8 @@ import numpy as np
 
 
 RUN_DIR = Path("runs/main_run")
-RESULTS_PATH = RUN_DIR / "evaluation_results.md"
-OUTPUT_PATH = RUN_DIR / "evaluation_benchmarks.png"
+RESULTS_PATH = RUN_DIR / "evaluation_results_v2.md"
+OUTPUT_PATH = RUN_DIR / "evaluation_benchmarks_v2.png"
 
 
 def parse_markdown_table(path: Path) -> tuple[list[str], list[tuple[str, list[float]]]]:
@@ -49,7 +49,7 @@ def main() -> None:
             color=colors[index],
         )
 
-    axis.set_title("Repaired 100k PFN Checkpoint vs Classical Baselines")
+    axis.set_title("200k PFN Checkpoint vs Classical Baselines")
     axis.set_ylabel("Held-out accuracy")
     axis.set_xticks(positions, datasets)
     axis.set_ylim(0, 1.08)

@@ -73,9 +73,9 @@ def detect_target_proxy_columns(X: pd.DataFrame, y: pd.Series) -> list[dict[str,
 
 
 def make_pfn_pipeline(
-    checkpoint_path: str, dummy_mode: bool, cat_cols: list[str], num_cols: list[str], text_cols: list[str]
+    checkpoint_path: str, dummy_mode: bool, cat_cols: list[str], num_cols: list[str], text_cols: list[str], model_kwargs: dict = None
 ):
-    model = ZeroShotClassifier(checkpoint_path=checkpoint_path, dummy=dummy_mode)
+    model = ZeroShotClassifier(checkpoint_path=checkpoint_path, dummy=dummy_mode, model_kwargs=model_kwargs)
     return build_pipeline(model, is_pfn=True, cat_cols=cat_cols, num_cols=num_cols, text_cols=text_cols)
 
 
@@ -126,6 +126,12 @@ with st.sidebar:
     checkpoint_path = st.text_input(
         "Checkpoint path",
         str(DEFAULT_CHECKPOINT_PATH),
+        disabled=dummy_mode,
+    )
+    use_10m_model = st.toggle(
+        "Use 10M Parameter Model Architecture",
+        value="10m" in str(DEFAULT_CHECKPOINT_PATH),
+        help="Check this if the checkpoint is the 10M parameter model (d_model=256, 12 layers).",
         disabled=dummy_mode,
     )
     test_size = st.slider("Query set size (%)", min_value=10, max_value=90, value=30, step=5)
@@ -206,8 +212,9 @@ if uploaded_file is not None:
                 started_at = time.perf_counter()
 
                 if run_pfn:
+                    model_kwargs = {"d_model": 256, "n_layers": 12, "n_heads": 8, "d_ff": 1107} if use_10m_model else None
                     pfn_pipeline = make_pfn_pipeline(
-                        checkpoint_path, dummy_mode, cat_cols, num_cols, text_cols
+                        checkpoint_path, dummy_mode, cat_cols, num_cols, text_cols, model_kwargs
                     )
                     pfn_pipeline.fit(X_support_model, y_support)
                     pfn_predictions = pfn_pipeline.predict(X_query_model)
@@ -222,7 +229,7 @@ if uploaded_file is not None:
                 if prediction_mode == "Auto reliable":
                     pfn_validation = support_validation_score(
                         lambda: make_pfn_pipeline(
-                            checkpoint_path, False, cat_cols, num_cols, text_cols
+                            checkpoint_path, False, cat_cols, num_cols, text_cols, {"d_model": 256, "n_layers": 12, "n_heads": 8, "d_ff": 1107} if use_10m_model else None
                         ),
                         X_support_model,
                         y_support,

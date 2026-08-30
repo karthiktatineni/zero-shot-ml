@@ -88,15 +88,11 @@ def build_pipeline(model, is_pfn=False, cat_cols=None, num_cols=None, text_cols=
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--dummy-pfn', action='store_true', help='Use untrained PFN for dry run testing.')
-    parser.add_argument(
-        '--checkpoint',
-        type=str,
-        default=str(DEFAULT_CHECKPOINT_PATH),
-        help='Path to PFN checkpoint.',
-    )
-    parser.add_argument('--out', type=str, default="reports/evaluation_results.md")
+    parser = argparse.ArgumentParser(description="Evaluate Zero-Shot PFN on real datasets")
+    parser.add_argument("--dummy-pfn", action="store_true", help="Use untrained PFN for dry run testing.")
+    parser.add_argument("--checkpoint", type=str, default=None, help="Path to PFN checkpoint.")
+    parser.add_argument("--out", type=str, default="evaluation_results.md")
+    parser.add_argument("--model-kwargs", type=str, default=None, help="JSON string for model kwargs")
     args = parser.parse_args()
     
     datasets = load_all_datasets()
@@ -125,7 +121,9 @@ def main():
         X_test, y_test = X.iloc[test_idx], y.iloc[test_idx]
         
         # PFN
-        pfn_model = ZeroShotClassifier(checkpoint_path=args.checkpoint, dummy=args.dummy_pfn)
+        import json
+        model_kwargs = json.loads(args.model_kwargs) if args.model_kwargs else None
+        pfn_model = ZeroShotClassifier(checkpoint_path=args.checkpoint, dummy=args.dummy_pfn, model_kwargs=model_kwargs)
         pfn_pipe = build_pipeline(pfn_model, is_pfn=True, cat_cols=cat_cols, num_cols=num_cols, text_cols=text_cols)
         
         pfn_pipe.fit(X_train, y_train)
