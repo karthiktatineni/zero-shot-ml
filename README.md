@@ -1,5 +1,7 @@
 # Zero-Shot Tabular PFN
 
+> **Disclaimer**: This model is currently still in the training phase. At present, it has achieved few-shot capabilities rather than true zero-shot performance. Work is ongoing to reach the zero-shot goal.
+
 A compact Prior-Fitted Network (PFN) prototype for small tabular classification tasks. The project pretrains a Transformer on synthetic support/query episodes, then uses the frozen model as an in-context classifier for a new labelled support set and unlabelled query rows.
 
 ## Current Status
